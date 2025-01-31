@@ -1,0 +1,119 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>TARANG 2025</title> 
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: rgb(255, 255, 255);  
+}  
+.container {  
+    padding: 100px;  
+  background-color: rgb(184, 184, 184);
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pj.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+}  
+form {
+  color: rgb(238, 255, 0); /* Change this to any color you want */
+}
+  
+input[type=text]{  
+  width: 50%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #ffffff;  
+}  
+input[type=text]:focus {  
+  background-color: rgb(251, 255, 0);  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #ffffff;  
+  margin-bottom: 25px;  
+}  
+.button {  
+  background-color:  rgb(36, 209, 2);  
+  color: rgb(0, 0, 0);  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 50%;  
+  opacity: 1;  
+  text-decoration: none;
+}  
+.button:hover {
+  background-color: rgb(30, 180, 0); 
+}
+
+</style>  
+</head>  
+<body>  
+<form>  
+  <div class="container">  
+  <center>  <h1> Student Registration Form for Tarang 2K25 Participation</h1> </center>  
+  <hr>  
+  <label> Firstname: </label>  <br> 
+<input type="text" name="firstname" placeholder= "Firstname" size="15" required />  <br> 
+<label> Middlename: </label>  <br> 
+<input type="text" name="middlename" placeholder="Middlename" size="15" required />  <br> 
+<label> Lastname: </label> <br>   
+<input type="text" name="lastname" placeholder="Lastname" size="15"required />   
+
+<br><label>Choose Events:</label><br>
+<div class="checkbox-group"></div>
+
+    <label><input type="checkbox" name="events[]" value="coding"> Traditional Dance</label><br>
+    <label><input type="checkbox" name="events[]" value="robotics"> Fashion Show</label><br>
+    <label><input type="checkbox" name="events[]" value="art"> Art & Gallery Contest</label><br>
+    <label><input type="checkbox" name="events[]" value="gaming"> Singing</label><br>
+    <label><input type="checkbox" name="events[]" value="music"> Fete</label><br>
+    <label><input type="checkbox" name="events[]" value="music"> Short-Film Making</label>
+  
+<div>  
+<label>   
+
+Branch :  
+</label><br>  
+<input type="radio" value="CSE" name="Branch"> Computer Science & Engineering<br>
+<input type="radio" value="AI" name="Branch"> Artificial Intelligence<br>
+<input type="radio" value="ETC" name="Branch"> Electronics & Telecommunication<br>
+<input type="radio" value="Civil Engineering" name="Branch"> Civil Engineering
+</div>  
+<div>  
+<div>  
+<label>  
+
+Semester :  
+</label>
+<select>  
+<option value="Semester"> Semester</option>  
+<option value="1st">1st</option>  
+<option value="2nd">2nd</option>  
+<option value="3rd">3rd</option>  
+<option value="4th">4th</option>  
+<option value="5th">5th</option>  
+<option value="6th">6th</option>  
+<option value="7th">7th</option>  
+<option value="8th">8th</option>  
+</select> 
+  
+</div>  
+<label>Phone no. :</label>  
+<input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone no." pattern="[0-9]{10}" maxlength="10" required>
+<span id="phoneError" style="color: red; display: none;">Please enter a valid 10-digit phone number.</span>
+
+ <button style="display: block; margin: auto;" type="submit"><a href="regs.html">SUBMIT</a>  </button>  
+</div>
+</form>  
+</body>  
+</html>  
