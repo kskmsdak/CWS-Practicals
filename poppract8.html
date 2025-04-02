@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Pop-Up Box(Kuldeep)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #0084ff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Pop-Up Box</h2>
+    
+    <!-- a) Display Date -->
+    <input type="text" id="dateBox" placeholder="Click button to display date" readonly>
+    <br>
+    <button onclick="displayDate()">Display Date</button>
+    
+    <br><br>
+    
+    <!-- b) Factorial Calculation -->
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    
+    <br><br>
+    
+    <!-- c) Multiplication Table -->
+    <button onclick="multiplicationTable()">Multiplication Table</button>
+    
+    <br><br>
+    
+    <!-- d) Sum of Numbers -->
+    <button onclick="sumNumbers()">Sum of Numbers</button>
+    
+    <script>
+        // Function to display current date in input box
+        function displayDate() {
+            document.getElementById("dateBox").value = new Date().toLocaleDateString();
+        }
+
+        // Function to calculate factorial
+        function calculateFactorial() {
+            let n = parseInt(prompt("Enter a number to find factorial:"));
+            if (isNaN(n) || n < 0) {
+                alert("Please enter a valid non-negative number.");
+                return;
+            }
+            let factorial = 1;
+            for (let i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            alert("Factorial of " + n + " is: " + factorial);
+        }
+
+        // Function to display multiplication table
+        function multiplicationTable() {
+            let n = parseInt(prompt("Enter a number to display multiplication table:"));
+            if (isNaN(n)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+            let result = "Multiplication Table for " + n + "\n";
+            for (let i = 1; i <= 10; i++) {
+                result += n + " x " + i + " = " + (n * i) + "\n";
+            }
+            alert(result);
+        }
+
+        // Function to sum numbers based on user input
+        function sumNumbers() {
+            let sum = 0;
+            let n = parseInt(prompt("Enter a number:"));
+            while (!isNaN(n)) {
+                sum += n;
+                let addMore = confirm("Do you want to add another number?");
+                if (!addMore) break;
+                n = parseInt(prompt("Enter another number:"));
+            }
+            alert("The total sum is: " + sum);
+        }
+    </script>
+</body>
+</html>
